@@ -3,8 +3,8 @@
 ### Пара задач на javascript
 
 ```
-Используется:
-+1. vue 3
-+1. vue-router
-+1. Options API.
+-Используется:
+-1. vue 3
+-2. vue-router
+-3. Options API.
 ```
