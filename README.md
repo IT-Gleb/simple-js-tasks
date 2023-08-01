@@ -4,7 +4,7 @@
 
 ```
 Используется:
-1. vue 3
-1. vue-router
-1. Options API.
++1. vue 3
++1. vue-router
++1. Options API.
 ```
