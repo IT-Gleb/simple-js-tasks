@@ -1,0 +1,183 @@
+@import "@/assets/css/colors.scss";
+@import "@/assets/css/thisFonts.scss";
+
+@mixin Margin0 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  // scrollbar-color: black silver;
+  scrollbar-color: $DarkPrimaryColor $LightPrimaryColor;
+}
+
+@mixin forScroll {
+  /* Works on Firefox */
+  * {
+    scrollbar-width: thin;
+    // scrollbar-color: black silver;
+    scrollbar-color: $DarkPrimaryColor $LightPrimaryColor;
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    //background: silver;
+    background: $LightPrimaryColor;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    // background-color: black;
+    background-color: $DarkPrimaryColor;
+    border-radius: 14px;
+    //    border: 2px solid silver;
+    border: 2px solid $AccentColor;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  @include Margin0();
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: $TextIconsColor;
+  color: $PrimaryTextColor;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "myRaleway";
+  font-size: 1rem;
+  line-height: 1.35rem;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  @include forScroll();
+}
+
+p {
+  text-indent: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "myHeaderFont";
+  margin-bottom: 5px;
+  margin-top: 5px;
+  line-height: 2rem;
+}
+
+.divider {
+  width: 100%;
+  min-height: 1.5vh;
+  display: block;
+  background-color: $DividerColor;
+  opacity: 0.08;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+header {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 5vh;
+  background-color: $PrimaryColor;
+}
+
+main {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 90vh;
+  flex: 1 0 auto;
+}
+
+footer {
+  width: 100%;
+  min-height: 5vh;
+  background-color: $PrimaryColor;
+  color: $TextIconsColor;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  p {
+    font-size: x-small;
+    text-transform: uppercase;
+  }
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  li {
+    border: 1px solid $DarkPrimaryColor;
+    padding: 2px 8px;
+    border-radius: 6px 6px;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  // @media screen and (max-width: 500px) {
+  //   width: 96%;
+  // }
+  @media screen and (321px < width < 501px) {
+    width: 98%;
+  }
+}
+
+.numInput {
+  width: 4rem;
+  // font-size: 1rem;
+  border: 1px solid $PrimaryColor;
+  border-radius: 6px 6px;
+  padding: 4px 9px;
+  font-size: smaller;
+  &:focus {
+    outline: 2px solid $AccentColor;
+    color: $SecondaryTextColor;
+    font-weight: bold;
+  }
+}
+.lblOne {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.myBtn {
+  width: 6rem;
+  height: 2.5rem;
+  overflow: hidden;
+  background-color: rgba($LightPrimaryColor, 0.25);
+  border: 2px solid $PrimaryColor;
+  border-radius: 4px 4px;
+  padding: 2px 5px;
+  cursor: pointer;
+  &:active {
+    outline: 1px solid $AccentColor;
+    background-color: $PrimaryColor;
+    color: $AccentColor;
+  }
+}

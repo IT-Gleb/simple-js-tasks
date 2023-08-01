@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "myRaleway";
+  src: url("@/assets/css/fonts/Raleway-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "myHeaderFont";
+  src: url("@/assets/css/fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "myLinkFont";
+  src: url("@/assets/css/fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-display: fallback;
+}
